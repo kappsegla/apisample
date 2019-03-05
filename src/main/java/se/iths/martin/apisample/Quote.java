@@ -11,6 +11,7 @@ import javax.persistence.Id;
 
 @Data
 @Entity
+@NoArgsConstructor
 public class Quote {
 
     private @Id @GeneratedValue Long id;
