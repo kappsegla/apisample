@@ -22,19 +22,20 @@ public class ApiController {
 
     @GetMapping("/quotes")
     public Iterable<Quote> getAll() {
-        logger.error("This is an error");
+        logger.info("Request for all quotes.");
         return quoteRepository.findAll();
     }
 
     @GetMapping("/quotes/{id}")
     public Quote getOne(@PathVariable Long id) {
-        logger.debug("Request for id: " + id);
+        logger.info("Request for quote " + id);
         return quoteRepository.findById(id)
                 .orElseThrow(() -> new QuoteNotFoundException("Not found"));
     }
 
     @PostMapping("/quotes")
     public void postNew(@RequestBody Quote quote) {
+        logger.info("New quote added.");
         quote.setDateTime(LocalDateTime.now());
         quoteRepository.save(quote);
     }
