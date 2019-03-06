@@ -39,4 +39,12 @@ public class ApiController {
         quote.setDateTime(LocalDateTime.now());
         quoteRepository.save(quote);
     }
+
+
+    @GetMapping("/help")
+    public String help() {
+        return "This service is used for storing and retrieving quotes.";
+    }
+
+
 }
