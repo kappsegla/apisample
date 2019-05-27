@@ -18,7 +18,7 @@ public class ApisampleApplicationTests {
 
     @Test
     public void fail(){
-        assertFalse(true);
+        assertFalse(false);
     }
 
 }

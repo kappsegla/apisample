@@ -23,7 +23,7 @@ public class ApiController {
     @GetMapping("/quotes")
     public Iterable<Quote> getAll() {
         logger.info("Request for all quotes.");
-         quoteRepository.findAll();
+        return quoteRepository.findAll();
     }
 
     @GetMapping("/quotes/{id}")
