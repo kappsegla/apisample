@@ -43,7 +43,7 @@ public class ApiController {
 
     @GetMapping("/help")
     public String help() {
-        return "This service is used for storing and retrieving quotes.";
+        return "This service is used for storing and retrieving quotes. -API Sample";
     }
 
 
